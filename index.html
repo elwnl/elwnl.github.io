@@ -12,9 +12,9 @@ title: Long Haul
 			<h3>
 				<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
 			</h3>
-				{%- if page.image -%}
+				{%- if post.image -%}
    				 <div class="featuredImage">
-       				 	<img src="{{ '/assets/img/' | append: page.image | relative_url }}" alt="" />
+       				 	<img src="{{ '/assets/img/' | append: post.image | relative_url }}" alt="" />
      				 </div>
   				{%- endif -%}
 
