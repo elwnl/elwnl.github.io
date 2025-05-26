@@ -12,10 +12,18 @@ title: Long Haul
 			<h3>
 				<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
 			</h3>
+			{%- if post.image -%}
+ 			 <img src="{{ post.image | relative_url }}" alt="{{ post.title }} image" class="post-image">
+			{%- endif -%}
+
 			<p>
-				{%- if post.description -%}{{ post.description }}{%- else -%}{{
-				post.excerpt | strip_html }}{%- endif -%}
+  				{%- if post.description -%}
+   				{{ post.description }}
+ 				{%- else -%}
+ 				{{ post.excerpt | strip_html }}
+ 				{%- endif -%}
 			</p>
+			
 		</article>
 		{%- endfor -%}
 	</div>
